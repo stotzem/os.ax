@@ -1,9 +1,0 @@
-{%- assign linkprefix = "https://steamcommunity.com/workshop/filedetails/?id=" -%}
-<li><a target="_blank" href="{{ linkprefix }}{{ include.entry.id }}">{{ include.entry.name }}</a>
-{%- if include.entry.de %}
-(<a target="_blank" href="{{ linkprefix }}{{ include.entry.de }}">Deutsche Übersetzung</a>)
-{%- endif -%}
-{% if include.entry.desc %}
-<br>{{ include.entry.desc }}
-{%- endif -%}
-</li>
