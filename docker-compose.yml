@@ -1,0 +1,15 @@
+services:
+  webserver:
+    container_name: apache-php
+    image: php:8.3-apache
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/var/www/html
+      - ./docker/sites.conf:/etc/apache2/sites-available/000-default.conf
+      - ./docker/ports.conf:/etc/apache2/ports.conf
+    networks:
+      - network
+networks:
+  network:
+    driver: bridge
